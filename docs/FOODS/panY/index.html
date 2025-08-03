@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>一品紹介</title>
+    <link rel="stylesheet" href="../../style.css">
+    <style>
+      .header {
+        background: transparent !important;
+      }
+    </style>
+</head>
+<body>
+
+    <!-- ヘッダー（1つだけ残す） -->
+    <header class="header">
+      <div class="header-images" style="display: flex; align-items: center; justify-content: center; height: 100px;">
+        <img src="../../images/IMG_1982.png" alt="cloud right" class="cloud-img cloud-right" style="height: 100px; width: auto; object-fit: contain;" />
+        <img src="../../images/ロゴ.png" alt="header logo" class="header-logo" style="height: 100px; width: auto; object-fit: contain; margin: 0 12px; cursor: pointer;" />
+        <img src="../../images/IMG_1984.png" alt="cloud left" class="cloud-img cloud-left" style="height: 100px; width: auto; object-fit: contain;" />
+      </div>
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          var logo = document.querySelector('.header-logo');
+          if (logo) {
+            logo.style.cursor = 'pointer';
+            logo.addEventListener('click', function() {
+              window.location.href = '../../TOP/index.html';
+            });
+          }
+        });
+      </script>
+    </header>
+    <div class="productF">
+        <div class="kumoF">
+            <img src="../../images/IMG_1976.png" alt="雲">
+        </div>
+        <div class="topF">
+            <div class="leftF">
+                <div class="top2F">
+                    <div class="imageF">
+                        <img src="../../images/meronpanA.png" >
+                    </div>
+                </div>
+                <div class="pointF">
+                    <div class="pointSet">
+                        <p class="pointTitle">おいしさ　</p>
+                        <p class="pointValue">73点</p>
+                    </div>
+                    <div class="pointSet">
+                        <p class="pointTitle">　　　味　</p>
+                        <p class="pointValue">9点</p>
+                    </div>
+                    <div class="pointSet">
+                        <p class="pointTitle">　見た目　</p>
+                        <p class="pointValue">25点</p>
+                    </div>
+                    <div class="pointSet">
+                        <p class="pointTitle">　　匂い　</p>
+                        <p class="pointValue">5点</p>
+                    </div>
+                    <p class="totalF">計112点</p>
+                </div>
+            </div>
+            <div class="rightF">
+                <div class="nameF">メロンパン(黄)</div>
+            </div>
+        </div>
+        <div class="bottomF">
+            <p class="reviewF">評価</p>
+            <div class="commentSet">
+                <p class="commentF">・美味しいパンの匂いがする メロンではないねこれは</p>
+            </div>
+            <div class="commentSet">
+                <p class="commentF">・なぜ見た目をメロンだと思ったのか、甚だ疑問。改めて見てもそう思う。どの要素がメロンなのか教えてほしい。味は美味しい。</p>
+            </div>
+            <div class="commentSet">
+                <p class="commentF">・ただ美味しいだけのパン。メロンパンってなんでメロンなの？よく見たらメロンには表面のボコボコないよね。 </p>
+            </div>
+            <div class="commentSet">
+                <p class="commentF">・</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
