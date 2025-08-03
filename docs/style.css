@@ -1,0 +1,434 @@
+/* 共通設定 */
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: sans-serif;
+  background-color: #f8f3e4;
+  padding-top: 64px;    /* ヘッダーの高さ分（調整可） */
+  background-image: url('./images/back.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* 説明（縦書き） */
+.description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1020px;
+}
+
+.vertical-text {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  background-color: #ccc;
+  padding: 20px;
+  font-size: 18px;
+}
+
+/* メニュー */
+.menu {
+  background-color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 60px 10px;
+  height: 1020px;
+}
+
+
+
+.menu-item {
+  text-align: center;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.box {
+  width: 60px;
+  height: 80px;
+  background-color: #ddd;
+  margin: 5px auto;
+}
+
+/* フィールド */
+.field {
+  position: relative;
+  height: 1200px;
+  background-color: #6cbf7d; /* 芝生色 */
+  overflow: hidden;
+}
+/* コート部分（上半円+線） */
+.court {
+  position: absolute;
+  top: -1400px; /* 垂直方向の位置 */
+  left: auto; /* 左端からの距離を無効化 */
+  right: -1000px; /* 右端に配置 */
+  width: 2200px; /* コートの幅を調整 */
+  height: 2200px; /* コートの高さを調整 */
+  background-color: #f5a63f;
+  border-bottom: none; /* 緑色の線を削除 */
+  border-radius: 50%; /* 完全な円形にする */
+   z-index: 1; /* 画像アニメーションの下に表示 */
+}
+.image-container {
+  position: absolute;
+  top: 100px; /* フィールドの上部から開始 */
+  left: 0; /* 左端から開始 */
+  z-index: 10; /* アニメーションを前面に表示 */
+}
+
+.image-container img {
+  position: absolute; /* 個別に位置を設定 */
+  width: 300px;
+  height: 300px;
+  border-radius: 5%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+  transition: transform 0.1s linear; /* スムーズな動き */
+}
+
+
+
+
+/* 白い円2つ */
+.circle-large, .circle-small {
+  position: absolute;
+  border: 4px solid white;
+  border-radius: 50%;
+}
+
+.circle-large {
+  width: 100px;
+  height: 100px;
+  top: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.circle-small {
+  width: 70px;
+  height: 70px;
+  top: 140px;
+  left: 55%;
+}
+
+/* フィールド上のブロック */
+.block {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-color: #ddd;
+}
+
+/* 中央の小さい四角 */
+.square-center {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  border: 1px solid #444;
+}
+
+/* メンバー欄 */
+.member {
+  text-align: center;
+  padding: 30px;
+  font-size: 18px;
+  height: 1020px;
+}
+
+.header {
+  background-color: #edd3a1;
+  color: #fff;
+  text-align: center;
+  padding: 4px 0;
+  font-size: 12px;
+  letter-spacing: 2px;
+  position: fixed;      /* 追加 */
+  top: 0;               /* 追加 */
+  width: 100%;          /* 追加 */
+  z-index: 1000;        /* 追加（重なり順を上に） */
+}
+
+.footer {
+  background-color: #edd3a1;
+  color: #333;
+  text-align: center;
+  padding: 16px 0 0 0; /* 下パディングを0にして調整 */
+  font-size: 16px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  
+}
+
+.footer-semicircle {
+  width: 120px;              /* 半円の幅 */
+  height: 60px;              /* 半円の高さ */
+  background: #edd3a1;       /* フッターと同じ色 */
+  border-top-left-radius: 60px 60px;
+  border-top-right-radius: 60px 60px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  margin: 0 auto;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -30px;                /* フッターからはみ出す位置 */
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.05); /* お好みで影 */
+  z-index: 1;
+}
+
+.wrapper {
+  background-image: url("images/vine.png");
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: contain;
+  padding-left: 60px; /* つるの幅に合わせて調整 */
+}
+
+
+.bar {
+  background-color: #ccc;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.indicator {
+  width: 16px;
+  height: 16px;
+  border: 2px solid red;
+  border-radius: 4px;
+  background-color: white;
+}
+
+.criteria {
+  background-color: #ddd;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+/* カード全体 */
+.card {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 20px 10px;
+}
+
+/* 左：メーター */
+.meter {
+  width: 70px;
+  height: 70px;
+  /* background-color: #68a665; */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  font-weight: bold;
+}
+
+/* 右：イラスト＋名前＋総評 */
+.info {
+  flex: 1;
+}
+
+.image {
+  width: 100%;
+  height: 80px;
+  /* background-color: #eee; */
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.name {
+  width: 50px;
+  height: 80px;
+  /* background-color: #888; */
+  /* color: white; */
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  float: right;
+  margin-left: 8px;
+  text-align: center;
+  padding: 5px;
+}
+
+.summary {
+  clear: both;
+  background-color: #ddd; /* 背景色を設定 */
+  height: 60px;
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.kumoF{
+    position: fixed;      /* 追加 */
+    top: 0;               /* 追加 */
+    width: 100%;  
+}
+
+.productF{
+    display: flex;
+    flex-direction: column;
+    padding:20px;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Yuji Mai',serif;
+}
+
+.topF{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 40px; /* ← 下に余白を追加（必要に応じて値を調整） */
+}
+
+.leftF {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.top2F{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 50vw;
+}
+.imageF,.materF {
+    display: flex;
+    width: 60vw;
+    height: 70vh;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+.imageF img,.materF img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.pointF {
+    width: 60vw;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    color: #543F32;
+    font-size: 50px;
+    line-height: 0.2;
+}
+.pointSet{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    color: #543F32;
+    justify-content: center;
+    align-items: center;
+    
+}
+.pointTitle{
+    font-weight: bold;
+}
+.totalF{
+    font-weight: bold;
+    font-size: 60px;
+    text-align: center;
+    margin-left: auto;
+}
+
+.rightF {
+    display: flex;
+    writing-mode: vertical-rl;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 0; /* 上の余白を0に */
+    padding-top: 0; /* 必要なら追加 */
+}
+.nameF {
+    background-color: #EDD3A1;
+    color: #543F32;
+    font-family: 'Yuji Mai',serif;
+    font-size: 100px;
+    font-weight: bold;
+    text-align: flex-start;
+}
+.bottomF {
+    display: flex;
+    flex-direction: column;
+    align-items: center;      /* ← ここをcenterに */
+    justify-content: flex-start;
+    width: 50vw;
+    max-height: 100vh;
+    overflow-y: auto;
+    background-color: #EDD3A1;
+    padding: 20px;
+    margin-top: 5%;
+    gap: 10px;
+    box-sizing: border-box;
+}
+.reviewF{
+    text-align: center;
+    font-weight: bold;
+    color: #543F32;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;   /* 横方向中央寄せ */
+    align-items: center;       /* 縦方向中央寄せ */
+}
+
+.commentSet {
+    width: 100%;
+    color: #543F32;
+    font-size: 40px;
+    line-height: 1.4;
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.commentF {
+    display: block;
+    word-wrap: break-word;
+}
+
+
+.footerF{
+    display: flex;
+    flex-direction: row;
+    background-color: #EDD3A1;
+}
+.backF{
+    display: flex;
+    margin-left: auto;
+}
+.nextF{
+    display: flex;
+    margin-right: auto;
+}
