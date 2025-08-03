@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // TOPページへの遷移
         setTimeout(() => {
-            window.location.href = '../TOP/index.html';
+            window.location.href = './TOP/index.html';
         }, 3000);
     }, 15000); // タイミングを調整
 });
